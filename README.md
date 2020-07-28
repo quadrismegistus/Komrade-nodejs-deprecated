@@ -44,3 +44,20 @@ Tool to meet fellow comrades in your area and organize with them
 ## Rules
 
 *   No cops!
+
+## Helping development
+
+Please help! I'm in over my head here with web development and design.
+
+### Installation
+
+Run:
+
+```
+git clone https://github.com/quadrismegistus/Komrade.git
+cd Komrade/webapp
+yarn
+yarn start
+```
+
+And you should be good to go.
