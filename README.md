@@ -1,5 +1,6 @@
 # Komrade
-Social network for the revolution
+
+A socialist network
 
 ## Idea
 
