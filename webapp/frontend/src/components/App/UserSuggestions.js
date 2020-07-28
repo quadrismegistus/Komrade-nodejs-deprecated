@@ -87,35 +87,35 @@ const UserSuggestions = ({ pathname }) => {
           return null;
         }
 
-        return (
-          <Root>
-            <H3>Suggestions For You</H3>
+        return (<Spacing></Spacing>
+          // <Root>
+          //   <H3>Suggestions For You</H3>
 
-            <List>
-              {data.suggestPeople.map(user => (
-                <ListItem key={user.id}>
-                  <A
-                    to={generatePath(Routes.USER_PROFILE, {
-                      username: user.username,
-                    })}
-                  >
-                    <Avatar image={user.image} />
-                  </A>
+          //   <List>
+          //     {data.suggestPeople.map(user => (
+          //       <ListItem key={user.id}>
+          //         <A
+          //           to={generatePath(Routes.USER_PROFILE, {
+          //             username: user.username,
+          //           })}
+          //         >
+          //           <Avatar image={user.image} />
+          //         </A>
 
-                  <Spacing left="xs">
-                    <A
-                      to={generatePath(Routes.USER_PROFILE, {
-                        username: user.username,
-                      })}
-                    >
-                      <FullName>{user.fullName}</FullName>
-                      <UserName>@{user.username}</UserName>
-                    </A>
-                  </Spacing>
-                </ListItem>
-              ))}
-            </List>
-          </Root>
+          //         <Spacing left="xs">
+          //           <A
+          //             to={generatePath(Routes.USER_PROFILE, {
+          //               username: user.username,
+          //             })}
+          //           >
+          //             <FullName>{user.fullName}</FullName>
+          //             <UserName>@{user.username}</UserName>
+          //           </A>
+          //         </Spacing>
+          //       </ListItem>
+          //     ))}
+          //   </List>
+          // </Root>
         );
       }}
     </Query>

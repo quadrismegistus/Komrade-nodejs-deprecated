@@ -34,6 +34,7 @@ const Root = styled.div`
     padding-top: 0;
     position: sticky;
     top: 100px;
+    margin-top: 50px;
     margin-left: ${p => (p.isOpen ? 0 : `-${SIDEBAR_DESKTOP_WIDTH}px`)};
     flex-basis: ${SIDEBAR_DESKTOP_WIDTH}px;
     flex-grow: 0;
@@ -46,6 +47,8 @@ const Root = styled.div`
   @media (max-width: ${p => p.theme.screen.md}) {
     margin-left: ${p => (p.isOpen ? 0 : `-${SIDEBAR_MOBILE_WIDTH}px`)};
   }
+
+  display:none;
 `;
 
 const User = styled(NavLink)`

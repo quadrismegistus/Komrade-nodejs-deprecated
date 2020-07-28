@@ -20,6 +20,17 @@ import SiteInfo from 'constants/SiteInfo.json';
 
 import * as Routes from 'routes';
 
+import { NavLink, generatePath } from 'react-router-dom';
+
+
+
+import {
+  ExploreIcon,
+  HomeIcon,
+  PeopleIcon,
+  EnvelopeIcon,
+} from 'components/icons';
+
 const Root = styled(Container)`
   position: sticky;
   top: 0;
@@ -35,6 +46,30 @@ const Root = styled(Container)`
   @font-face {
     font-family: 'Strengthen';
     src: url('fonts/Strengthen.ttf');
+  }
+
+  // display:none;
+`;
+
+const Link = styled(NavLink)`
+  text-decoration: none;
+  transition: color 0.1s;
+  color: ${p => p.theme.colors.text.primary};
+  display: block;
+  padding-left: ${p => p.theme.spacing.xs};
+
+  &:hover,
+  &.selected {
+    color: ${p => p.theme.colors.primary.main};
+    // background-color: ${p => p.theme.colors.grey[100]};
+
+    svg path {
+      fill: yellow; // ${p => p.theme.colors.primary.main};
+    }
+
+    @media (min-width: ${p => p.theme.screen.md}) {
+      background-color: ${p => p.theme.colors.white};
+    }
   }
 `;
 
@@ -52,6 +87,7 @@ const Wrapper = styled.div`
   @media (min-width: ${p => parseInt(p.theme.screen.lg, 10) + 20 + 'px'}) {
     width: ${p => p.theme.screen.lg};
   }
+
 `;
 
 const LeftSide = styled.div`
@@ -67,11 +103,13 @@ const Hamburger = styled.div`
   @media (min-width: ${p => p.theme.screen.md}) {
     display: none;
   }
+
+  display:none;
 `;
 
 const Logo = styled(A)`
 
-  display: none;
+  // display: none;
   color: ${p => p.theme.colors.logo};
   /* color: 'black'; */
   font-weight: ${p => p.theme.font.weight.bold};
@@ -86,6 +124,7 @@ const Logo = styled(A)`
   @media (min-width: ${p => p.theme.screen.md}) {
     display: block;
   }
+
 `;
 
 const RightSide = styled.div`
@@ -168,6 +207,17 @@ const Header = ({ location, toggleSideBar }) => {
     }
   };
 
+
+const ListItem = styled.li`
+display: flex;
+flex-direction: row;
+align-items: center;
+`;
+
+const Name = styled.div`
+margin-left: ${p => p.theme.spacing.sm};
+`;
+
   return (
     <Root>
       <Wrapper>
@@ -177,14 +227,39 @@ const Header = ({ location, toggleSideBar }) => {
           </Hamburger>
 
           <Logo to={Routes.HOME}>{SiteInfo.name}</Logo>
+          
 
-          <Spacing left="sm" right="md">
+          {/* <Spacing left="sm" right="md">
             <Search location={location} placeholder="Search" />
-          </Spacing>
+          </Spacing> */}
         </LeftSide>
 
-        <RightSide>
-          <Spacing right="md">
+      <RightSide>
+        <Link exact activeClassName="selected" to={Routes.HOME}>
+          <HomeIcon />
+        </Link>
+
+      <Link exact activeClassName="selected" to={Routes.EXPLORE}>
+          <ExploreIcon />
+      </Link>
+
+      <Link exact activeClassName="selected" to={Routes.PEOPLE}>
+          <PeopleIcon />
+      </Link>
+
+      <Link exact activeClassName="selected" to={Routes.NOTIFICATIONS}>
+          <NotificationIcon />
+      </Link>
+
+      <Spacing right="md">
+        <Link exact activeClassName="selected" 
+        to={generatePath(Routes.MESSAGES, { userId: Routes.NEW_ID_VALUE })}>
+          <EnvelopeOpenIcon />
+        </Link>
+      </Spacing>
+
+
+          {/* <Spacing right="md">
             <Button ghost onClick={() => handleIconClick('MESSAGE')}>
               {auth.user.newConversations.length > 0 && (
                 <MessageCount>{auth.user.newConversations.length}</MessageCount>
@@ -203,7 +278,7 @@ const Header = ({ location, toggleSideBar }) => {
               )}
               <NotificationIcon />
             </Button>
-          </Spacing>
+          </Spacing> */}
 
           <Button ghost onClick={() => handleIconClick('USER')}>
             <Avatar image={auth.user.image} />
