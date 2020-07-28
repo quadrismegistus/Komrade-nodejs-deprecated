@@ -98,7 +98,7 @@ const Icons = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  border-top: 1px solid ${p => p.theme.colors.border.main};
+  // border-top: 1px solid ${p => p.theme.colors.border.main};
 `;
 
 const Comments = styled.div`
@@ -216,13 +216,13 @@ const PostCard = ({
 
         <BottomRow>
           <CountAndIcons>
-            <Count>
+            {/* <Count>
               {likes.length} likes
               <Spacing />
               <StyledButton onClick={toggleComment} text>
-                {comments.length} comments
+                {comments.length}  comments
               </StyledButton>
-            </Count>
+            </Count> */}
 
             <Icons>
               <Like
@@ -231,10 +231,14 @@ const PostCard = ({
                 user={author}
                 postId={postId}
                 likes={likes}
+                withText={false}
               />
 
               <Button fullWidth text onClick={toggleCreateComment}>
-                <PostCommentIcon /> <Spacing inline left="xxs" /> <b>Comment</b>
+                <PostCommentIcon />
+                <Spacing inline left="xxs" />
+                {comments.length} 
+                {/* <b>Comment</b> */}
               </Button>
             </Icons>
           </CountAndIcons>

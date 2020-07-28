@@ -85,7 +85,8 @@ const Like = ({ postId, user, likes, withText, fullWidth }) => {
           >
             <LikeIcon color={hasLiked && 'primary.main'} />
             <Spacing inline left="xxs" />
-            {withText && <b>Like</b>}
+            {/* {withText && <b>Like</b>} */}
+            {likes.length}
           </StyledButton>
         );
       }}

@@ -21,6 +21,8 @@ export default {
       md: '18px',
       lg: '20px',
       xl: '34px',
+      logo_big: '56px',
+      logo_small: '18px',
     },
   },
 

@@ -169,7 +169,7 @@ const CreatePost = () => {
                     value={title}
                     onFocus={handleOnFocus}
                     onChange={handleTitleChange}
-                    placeholder="Add a post"
+                    placeholder="word?"
                   />
 
                   {!isFocused && (

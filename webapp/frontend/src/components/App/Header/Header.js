@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import styled, { css } from 'styled-components';
 import { withRouter } from 'react-router-dom';
 
-import { NotificationIcon, MenuIcon, EnvelopeOpenIcon } from 'components/icons';
+import { NotificationIcon, MenuIcon, EnvelopeOpenIcon, UserIcon } from 'components/icons';
 import { Container, Spacing } from 'components/Layout';
 import { A } from 'components/Text';
 import { Button } from 'components/Form';
@@ -30,6 +30,9 @@ import {
   PeopleIcon,
   EnvelopeIcon,
 } from 'components/icons';
+
+
+const ICON_WIDTH = 25;
 
 const Root = styled(Container)`
   position: sticky;
@@ -107,22 +110,29 @@ const Hamburger = styled.div`
   display:none;
 `;
 
+const LogoLine = styled.div`
+  display:block;
+`;
+
 const Logo = styled(A)`
 
   // display: none;
+  // display: block;
   color: ${p => p.theme.colors.logo};
   /* color: 'black'; */
   font-weight: ${p => p.theme.font.weight.bold};
-  font-size: ${p => p.theme.font.size.xl};
+  font-size: ${p => p.theme.font.size.logo_small};
   /* text-transform: uppercase; */
   font-family: 'Strengthen';
 
   &:hover {
-    color: ${p => p.theme.colors.primary.main};
+    color: 'yellow'; //${p => p.theme.colors.primary.main};
   }
 
   @media (min-width: ${p => p.theme.screen.md}) {
     display: block;
+    font-size: ${p => p.theme.font.size.logo_big};
+    font-family: 'Strengthen';
   }
 
 `;
@@ -221,42 +231,49 @@ margin-left: ${p => p.theme.spacing.sm};
   return (
     <Root>
       <Wrapper>
-        <LeftSide>
+        {/* <LeftSide>
           <Hamburger onClick={toggleSideBar}>
             <MenuIcon />
           </Hamburger>
+           */}
 
+          <LogoLine>
           <Logo to={Routes.HOME}>{SiteInfo.name}</Logo>
-          
+          </LogoLine>
 
           {/* <Spacing left="sm" right="md">
             <Search location={location} placeholder="Search" />
-          </Spacing> */}
-        </LeftSide>
+          </Spacing>
+        </LeftSide> */}
 
-      <RightSide>
+      {/* <RightSide> */}
         <Link exact activeClassName="selected" to={Routes.HOME}>
-          <HomeIcon />
+          <HomeIcon width={ICON_WIDTH} />
         </Link>
 
-      <Link exact activeClassName="selected" to={Routes.EXPLORE}>
+      {/* <Link exact activeClassName="selected" to={Routes.EXPLORE}>
           <ExploreIcon />
-      </Link>
+      </Link> */}
 
       <Link exact activeClassName="selected" to={Routes.PEOPLE}>
-          <PeopleIcon />
+          <PeopleIcon width={ICON_WIDTH} />
       </Link>
 
       <Link exact activeClassName="selected" to={Routes.NOTIFICATIONS}>
-          <NotificationIcon />
+          <NotificationIcon width={ICON_WIDTH} />
       </Link>
 
-      <Spacing right="md">
+      {/* <Spacing right="md"> */}
         <Link exact activeClassName="selected" 
         to={generatePath(Routes.MESSAGES, { userId: Routes.NEW_ID_VALUE })}>
-          <EnvelopeOpenIcon />
+          <EnvelopeOpenIcon width={ICON_WIDTH} />
         </Link>
-      </Spacing>
+
+        <Link exact activeClassName="selected" 
+        to={generatePath(Routes.USER_PROFILE, { username: auth.user.username })}>
+          <UserIcon width={ICON_WIDTH} />
+        </Link>
+      {/* </Spacing> */}
 
 
           {/* <Spacing right="md">
@@ -280,10 +297,13 @@ margin-left: ${p => p.theme.spacing.sm};
             </Button>
           </Spacing> */}
 
-          <Button ghost onClick={() => handleIconClick('USER')}>
-            <Avatar image={auth.user.image} />
-          </Button>
-        </RightSide>
+          {/* <Button ghost onClick={() => handleIconClick('USER')}> */}
+            {/* <Avatar image={auth.user.image} /> */}
+          {/* </Button> */}
+
+
+
+        {/* </RightSide> */}
 
         <HeaderDropDowns
           messageRef={messageRef}
