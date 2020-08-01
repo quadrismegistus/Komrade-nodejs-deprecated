@@ -4,10 +4,9 @@ A socialist network
 
 ## Idea
 
-Most of our lives on the internet are now lived on social netwoks owned and operated by the largest companies in the world. These companies harvest our data, stitching it to data they collect elsewhere across the internet all to feed its advertising learning algorithms. These platforms have become the public infrastructure of all social life, and yet they are privately owned by a handful of out-of-touch white men billionaires.
+Much of our life today is lived on social networks owned and operated by two or three of the largest, multinational companies in the world. These companies harvest every click and view of our digital lives, stretching back 20 years now, which they employ hundreds of thousands of employees to analyze in order to squeeze every last drop out of profit. In the process, newspapers are destroyed, writers become 'content producers' caught in a wave of click and circulation not of their designing. These platforms have become the infrastructure of all social life, and yet they are privately owned by a handful of out-of-touch white male billionaires.
 
-But we don't need those fools. The technology is quite simple. Let's try to make a new kind of social network: a *socialist* network. One which is private, secure, insurveillable, unmonetizable, which would give people the security they need to communicate about whatever they want, including protesting against the state, police, and capitalists.
-
+But we don't need these fools. The technology's simple. Let's just make our own network: a *socialist* network. One that is private, secure, insurveillable, unmonetizable; one which would give people the security they need to communicate about whatever they want, including protesting against capital and the state.
 
 
 ## Features
