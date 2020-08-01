@@ -1,0 +1,22 @@
+.PostCard {
+  background-color: rgba(0, 0, 0, 0.666);;
+  width:85%;
+  max-width:555px;
+  margin:1em auto;
+  padding: 1.25em 0.75em 0 0.75em;
+  border:1px solid red;
+}
+
+.PostCard p {
+  color:yellow;
+  text-align:left;
+  margin-bottom:1em;
+}
+
+
+.PostAuthor {
+  text-align:left;
+  font-weight:bold;
+  margin-bottom:1em;
+  font-size:1.25em;
+}

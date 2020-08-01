@@ -6,10 +6,16 @@ import { ThemeProvider } from 'styled-components';
 import { createApolloClient } from 'utils/apollo-client';
 import { StoreProvider } from 'store';
 
+
 import 'normalize.css';
 import theme from 'theme';
 
 import App from 'components/App/App';
+
+//? import { Tor } from 'capacitor-tor';
+
+// Tor proxy
+
 
 // GraphQL HTTP URL
 const API_URL = process.env.REACT_APP_API_URL;

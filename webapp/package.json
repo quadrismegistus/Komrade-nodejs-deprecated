@@ -14,5 +14,9 @@
   ],
   "devDependencies": {
     "concurrently": "^4.1.2"
+  },
+  "dependencies": {
+    "@capacitor/cli": "^2.4.0",
+    "@capacitor/core": "^2.4.0"
   }
 }
