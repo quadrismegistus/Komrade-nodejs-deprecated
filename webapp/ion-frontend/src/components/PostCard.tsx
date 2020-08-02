@@ -1,31 +1,33 @@
 import React from 'react';
 import './PostCard.css'
 
+interface ContainerProps {
+  name: string;
+  content: string
+}
 
-
-const PostAuthor: React.FC = () => {
+const PostAuthor: React.FC<{name: string}> = ({ name }) => {
   return (
-    <div className="PostAuthor">q4y000</div>
+    <div className="PostAuthor">{name}</div>
   );
 };
 
-const PostContent: React.FC = () => {
+const PostContent: React.FC<{ content: string; }> = ({ content }) => {
   return (
     <div className="PostContent">
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. </p>
-      <p>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur sodales ligula in libero. Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh. Aenean quam. In scelerisque sem at dolor. Maecenas mattis. Sed convallis tristique sem. Proin ut ligula vel nunc egestas porttitor. Morbi lectus risus, iaculis vel, suscipit quis, luctus non, massa. Fusce ac turpis quis ligula lacinia aliquet. </p>
+      <p>{content}</p>
     </div>
   );
 };
 
 
-const PostCard: React.FC = () => {
+const PostCard: React.FC<{name: string; content: string}> = ({ name, content }) => {
   return (
     <div className="PostCard">
 
-      <PostAuthor />
+      <PostAuthor name={name} />
 
-      <PostContent />
+      <PostContent content={content} />
 
     </div>
   );

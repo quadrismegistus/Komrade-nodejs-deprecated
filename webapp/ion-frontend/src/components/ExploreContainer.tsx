@@ -1,6 +1,7 @@
 import React from 'react';
 import './ExploreContainer.css';
 import PostCard from './PostCard';
+import LoginContainer from './Login'
 
 
 interface ContainerProps {
@@ -10,10 +11,10 @@ interface ContainerProps {
 const ExploreContainer: React.FC<ContainerProps> = ({ name }) => {
   return (
     <div className="container">
-      <PostCard />
-      <PostCard />
-      <PostCard />
-      <PostCard />
+    <div className='label-logo-main'>Komrade</div>
+      <LoginContainer />
+      <PostCard name="quadrismegistus" content="Testing" />
+
     </div>
   );
 };

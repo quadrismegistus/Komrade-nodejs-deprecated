@@ -3,18 +3,17 @@ import { Redirect, Route } from 'react-router-dom';
 import {
   IonApp,
   IonIcon,
-  IonLabel,
   IonRouterOutlet,
   IonTabBar,
   IonTabButton,
   IonTabs
 } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
-import { newspaper, peopleCircle, mail } from 'ionicons/icons';
+import { peopleOutline, mailOutline, bonfireOutline, radioOutline, notificationsOutline } from 'ionicons/icons';
 import Feed from './pages/Feed';
 import People from './pages/People';
 import Messages from './pages/Messages';
-import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonText } from '@ionic/react';
+// import SignIn from './pages/SignIn';
 
 
 /* Core CSS required for Ionic components to work properly */
@@ -36,9 +35,43 @@ import '@ionic/react/css/display.css';
 /* Theme variables */
 import './theme/variables.css';
 
+// import { QueryChangeDetector } from 'rxdb';
+import { schema } from './Schema';
+
 
 /* Routers */
 import * as Routes from './routes';
+
+
+/* DB
+import {
+    createRxDatabase,
+    RxDatabase,
+    RxCollection,
+    RxJsonSchema,
+    RxDocument,
+} from 'rxdb';
+
+type KomradeDocType = {
+    username: string;
+    password_hash: string;
+};
+
+type KomradeDocument = RxDocument<KomradeDocType>
+*/
+
+import * as mongoose from "mongoose";
+mongoose.connect('mongodb://localhost:27017/test', {useNewUrlParser: true, useUnifiedTopology: true});
+
+const Cat = mongoose.model('Cat', { name: String });
+
+const kitty = new Cat({ name: 'Zildjian' });
+kitty.save().then(() => console.log('meow'));
+
+
+
+// RxDB.plugin(require('pouchdb-adapter-idb'));
+// RxDB.plugin(require('pouchdb-adapter-http'));
 
 
 // import { Capacitor } from '@capacitor/core';
@@ -70,6 +103,7 @@ import * as Routes from './routes';
 
 
 
+
 const App: React.FC = () => (
   <IonApp>
     <IonReactRouter>
@@ -83,22 +117,28 @@ const App: React.FC = () => (
         <IonTabBar slot="top">
 
           <IonTabButton tab="feed" href={Routes.FEED}>
-            <IonLabel class='label-logo'>Komrade</IonLabel>
-          </IonTabButton>
-
-          <IonTabButton tab="feed" href={Routes.FEED}>
-            <IonIcon icon={newspaper} />
+            <IonIcon icon={radioOutline} />
           </IonTabButton>
 
           <IonTabButton tab="people" href={Routes.PEOPLE}>
-            <IonIcon icon={peopleCircle} />
+            <IonIcon icon={peopleOutline} />
+          </IonTabButton>
+
+          <IonTabButton tab="events" href={Routes.FEED}>
+            <IonIcon icon={bonfireOutline} />
           </IonTabButton>
 
           <IonTabButton tab="messages" href={Routes.MESSAGES}>
-            <IonIcon icon={mail} />
+            <IonIcon icon={mailOutline} />
+          </IonTabButton>
+
+          <IonTabButton tab="notifications" href={Routes.MESSAGES}>
+            <IonIcon icon={notificationsOutline} />
           </IonTabButton>
 
         </IonTabBar>
+
+
       </IonTabs>
     </IonReactRouter>
 

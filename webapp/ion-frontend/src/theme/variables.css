@@ -248,35 +248,44 @@ http://ionicframework.com/docs/theming/ */
     font-family: 'Courier';
 }
 
-ion-title, .label-logo {
+body { background: url(./background.png) center/cover; }
+
+ion-title, .label-logo, .label-logo-main {
   color: red;
-  margin-top:0.25em;
-  font-size: 32px;
+  /* margin-top:0.25em; */
+  font-size: 64px;
+  background-color: black;
+  padding: 15px 15px 0 15px;
+  border:1px solid red;
+  width:555px;
+  margin:0 auto;
 
   font-family: 'Strengthen';
 }
 
 ion-header {
-  text-align:center;;
+  text-align:center;
   --ion-background-color:black;
 }
 
 ion-content{
     --ion-background-color:black;
-    /* --background: url(./background.png) no-repeat center/cover fixed; */
-    --background: url(./background.png) center/cover;
+    --background: url(./background.png) no-repeat center/cover fixed;
+
 }
 
 ion-tab-bar {
   /* border-bottom:1px solid #111D12; */
   --ion-background-color:black;
+  border:0px;
   vertical-align: middle;
   padding:0;
   margin:0;
+  margin-bottom:1em;
 }
 
 ion-icon {
 color:red
 }
 
-.container { color: yellow; }
+.container { color: red; }

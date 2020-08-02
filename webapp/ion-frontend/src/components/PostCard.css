@@ -1,5 +1,6 @@
 .PostCard {
-  background-color: rgba(0, 0, 0, 0.666);;
+  /* background-color: rgba(0, 0, 0, 0.666);; */
+  background-color:black;
   width:85%;
   max-width:555px;
   margin:1em auto;
@@ -8,7 +9,7 @@
 }
 
 .PostCard p {
-  color:yellow;
+  color:red;
   text-align:left;
   margin-bottom:1em;
 }

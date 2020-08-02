@@ -1,6 +1,5 @@
 {
   "name": "ion-frontend",
-  "proxy": "http://localhost:5000",
   "version": "0.0.1",
   "private": true,
   "dependencies": {
@@ -12,19 +11,12 @@
     "@testing-library/react": "^9.4.0",
     "@testing-library/user-event": "^8.0.3",
     "@types/jest": "^24.0.25",
-    "@types/mongoose": "^5.7.34",
     "@types/node": "^12.12.24",
     "@types/react": "^16.9.17",
     "@types/react-dom": "^16.9.4",
     "@types/react-router": "^5.1.4",
     "@types/react-router-dom": "^5.1.3",
-    "concurrently": "^5.2.0",
     "ionicons": "^5.0.0",
-    "moment": "^2.27.0",
-    "mongoose": "^5.9.27",
-    "pouchdb-adapter-http": "^7.2.2",
-    "pouchdb-adapter-idb": "^7.2.2",
-    "pouchdb-server": "^4.2.0",
     "react": "^16.13.0",
     "react-apollo": "^3.1.5",
     "react-dom": "^16.13.0",
@@ -32,18 +24,14 @@
     "react-router": "^5.1.2",
     "react-router-dom": "^5.1.2",
     "react-scripts": "3.4.1",
-    "react-toastify": "^6.0.8",
     "rxdb": "^9.5.0",
-    "rxjs": "^6.6.2",
-    "serve": "^11.3.2",
     "typescript": "3.8.3"
   },
   "scripts": {
-    "start": "concurrently \"npm run server\" \"react-scripts start\"",
+    "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "server": "pouchdb-server -d ./db"
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": "react-app"

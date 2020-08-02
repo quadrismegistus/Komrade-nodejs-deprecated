@@ -1,0 +1,40 @@
+[Sun, 02 Aug 2020 15:06:31 GMT] [info] [<0.000.0>] pouchdb-server has started on http://127.0.0.1:5984/
+[Sun, 02 Aug 2020 15:06:31 GMT] [info] [<0.000.0>] database files will be saved to ./db
+[Sun, 02 Aug 2020 15:06:31 GMT] [info] [<0.000.0>] navigate to http://127.0.0.1:5984/_utils for the Fauxton UI.
+[Sun, 02 Aug 2020 15:06:56 GMT] [info] [<0.000.0>] 127.0.0.1 - - GET /_utils 301
+[Sun, 02 Aug 2020 15:06:56 GMT] [info] [<0.000.0>] 127.0.0.1 - - GET /_utils/ 200
+[Sun, 02 Aug 2020 15:06:56 GMT] [info] [<0.000.0>] 127.0.0.1 - - GET /_utils/dashboard.assets/css/styles-a9623008fc27e79da2388441deeacfab.css 200
+[Sun, 02 Aug 2020 15:06:57 GMT] [info] [<0.000.0>] 127.0.0.1 - - GET /_utils/dashboard.assets/js/bundle-34997e32896293a1fa5d71f79eb1b4f7.js 200
+[Sun, 02 Aug 2020 15:06:57 GMT] [info] [<0.000.0>] 127.0.0.1 - - GET /_session 200
+[Sun, 02 Aug 2020 15:06:57 GMT] [info] [<0.000.0>] 127.0.0.1 - - GET /_session 304
+[Sun, 02 Aug 2020 15:06:57 GMT] [info] [<0.000.0>] 127.0.0.1 - - GET / 200
+[Sun, 02 Aug 2020 15:06:57 GMT] [info] [<0.000.0>] 127.0.0.1 - - GET /_utils/dashboard.assets/img/pouchdb-site.png 200
+[Sun, 02 Aug 2020 15:06:57 GMT] [info] [<0.000.0>] 127.0.0.1 - - GET /_utils/dashboard.assets/fonts/fauxtonicon5.woff 200
+[Sun, 02 Aug 2020 15:06:57 GMT] [info] [<0.000.0>] 127.0.0.1 - - GET /_all_dbs?_=1596380817096 200
+[Sun, 02 Aug 2020 15:06:57 GMT] [info] [<0.000.0>] 127.0.0.1 - - GET /_all_dbs?startkey=%22%22&endkey=%22%E9%A6%99%22&limit=30&_=1596380817097 200
+[Sun, 02 Aug 2020 15:06:57 GMT] [info] [<0.000.0>] 127.0.0.1 - - GET /_replicator?_=1596380817098 200
+[Sun, 02 Aug 2020 15:06:57 GMT] [info] [<0.000.0>] 127.0.0.1 - - GET /_users?_=1596380817099 200
+[Sun, 02 Aug 2020 15:06:57 GMT] [info] [<0.000.0>] 127.0.0.1 - - GET /_utils/dashboard.assets/fonts/fontawesome-webfont.woff 200
+[Sun, 02 Aug 2020 15:06:57 GMT] [info] [<0.000.0>] 127.0.0.1 - - GET /_utils/dashboard.assets/img/pouchdb-favicon.png 200
+[Sun, 02 Aug 2020 15:07:30 GMT] [info] [<0.000.0>] pouchdb-server has started on http://127.0.0.1:5984/
+[Sun, 02 Aug 2020 15:07:30 GMT] [info] [<0.000.0>] database files will be saved to ./db
+[Sun, 02 Aug 2020 15:07:30 GMT] [info] [<0.000.0>] navigate to http://127.0.0.1:5984/_utils for the Fauxton UI.
+[Sun, 02 Aug 2020 15:07:40 GMT] [info] [<0.000.0>] 127.0.0.1 - - GET /_utils/ 304
+[Sun, 02 Aug 2020 15:07:40 GMT] [info] [<0.000.0>] 127.0.0.1 - - GET /_utils/dashboard.assets/css/styles-a9623008fc27e79da2388441deeacfab.css 304
+[Sun, 02 Aug 2020 15:07:40 GMT] [info] [<0.000.0>] 127.0.0.1 - - GET /_utils/dashboard.assets/js/bundle-34997e32896293a1fa5d71f79eb1b4f7.js 304
+[Sun, 02 Aug 2020 15:07:41 GMT] [info] [<0.000.0>] 127.0.0.1 - - GET /_session 304
+[Sun, 02 Aug 2020 15:07:41 GMT] [info] [<0.000.0>] 127.0.0.1 - - GET /_session 304
+[Sun, 02 Aug 2020 15:07:41 GMT] [info] [<0.000.0>] 127.0.0.1 - - GET / 304
+[Sun, 02 Aug 2020 15:07:41 GMT] [info] [<0.000.0>] 127.0.0.1 - - GET /_utils/dashboard.assets/img/pouchdb-site.png 304
+[Sun, 02 Aug 2020 15:07:41 GMT] [info] [<0.000.0>] 127.0.0.1 - - GET /_utils/dashboard.assets/fonts/fauxtonicon5.woff 304
+[Sun, 02 Aug 2020 15:07:41 GMT] [info] [<0.000.0>] 127.0.0.1 - - GET /_all_dbs?_=1596380860975 200
+[Sun, 02 Aug 2020 15:07:41 GMT] [info] [<0.000.0>] 127.0.0.1 - - GET /_all_dbs?startkey=%22%22&endkey=%22%E9%A6%99%22&limit=30&_=1596380860976 200
+[Sun, 02 Aug 2020 15:07:41 GMT] [info] [<0.000.0>] 127.0.0.1 - - GET /_replicator?_=1596380860977 200
+[Sun, 02 Aug 2020 15:07:41 GMT] [info] [<0.000.0>] 127.0.0.1 - - GET /_users?_=1596380860978 200
+[Sun, 02 Aug 2020 15:07:41 GMT] [info] [<0.000.0>] 127.0.0.1 - - GET /_utils/dashboard.assets/fonts/fontawesome-webfont.woff 304
+[Sun, 02 Aug 2020 15:13:25 GMT] [info] [<0.000.0>] pouchdb-server has started on http://127.0.0.1:5984/
+[Sun, 02 Aug 2020 15:13:25 GMT] [info] [<0.000.0>] database files will be saved to ./db
+[Sun, 02 Aug 2020 15:13:25 GMT] [info] [<0.000.0>] navigate to http://127.0.0.1:5984/_utils for the Fauxton UI.
+[Sun, 02 Aug 2020 15:19:48 GMT] [info] [<0.000.0>] pouchdb-server has started on http://127.0.0.1:5984/
+[Sun, 02 Aug 2020 15:19:48 GMT] [info] [<0.000.0>] database files will be saved to ./db
+[Sun, 02 Aug 2020 15:19:48 GMT] [info] [<0.000.0>] navigate to http://127.0.0.1:5984/_utils for the Fauxton UI.
